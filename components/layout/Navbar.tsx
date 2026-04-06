@@ -4,25 +4,22 @@ import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "The Game", href: "#game" },
-  { label: "The Teams", href: "#teams" },
-  { label: "Schedule", href: "#schedule" },
-  { label: "Charities", href: "#charities" },
+  { label: "About", href: "#game" },
   { label: "The Venue", href: "#venue" },
-  { label: "Tickets", href: "#tickets" },
+  { label: "Charities", href: "#charities" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "The Teams", href: "#teams" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#dddfdd]`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gray-100">
       <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div className="flex items-center justify-between h-20 lg:h-28">
+        <div className="flex items-center h-20 lg:h-28">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#" className="flex items-center gap-3 group shrink-0">
             <Image
               src="/Summit_Logo.png"
               width={150}
@@ -31,43 +28,43 @@ export default function Navbar() {
             />
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={`relative px-5 py-2 text-sm font-black tracking-wider uppercase transition-colors duration-200 group ${"text-gray-700 hover:text-green-600"}`}
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-green-500 group-hover:w-3/4 transition-all duration-300 rounded-full" />
-              </a>
-            ))}
-          </nav>
-
-          {/* CTA + Mobile toggle */}
-          <div className="flex items-center gap-4">
+          {/* Desktop Nav + CTA — pushed to the far right */}
+          <div className="hidden lg:flex items-center gap-1 ml-auto">
+            <nav className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="relative px-5 py-2 text-md font-black tracking-wider uppercase text-gray-700 hover:text-green-600 transition-colors duration-200 group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-green-500 group-hover:w-3/4 transition-all duration-300 rounded-full" />
+                </a>
+              ))}
+            </nav>
             {/* <a
               href="#tickets"
-              className="hidden sm:inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white text-sm font-black tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-green-500/40 hover:-translate-y-0.5"
+              className="ml-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white text-sm font-black tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5"
             >
               Donate
             </a> */}
+          </div>
 
-            {/* Hamburger */}
+          {/* Mobile: Hamburger */}
+          <div className="lg:hidden flex items-center gap-3 ml-auto">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden flex flex-col gap-1.5 p-2"
+              className="flex flex-col gap-1.5 p-2"
               aria-label="Toggle menu"
             >
               <span
-                className={`block h-0.5 rounded transition-all duration-300 "bg-gray-800" ${menuOpen ? "w-6 rotate-45 translate-y-2" : "w-6"}`}
+                className={`block h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "w-6 rotate-45 translate-y-2" : "w-6"}`}
               />
               <span
-                className={`block h-0.5 rounded transition-all duration-300 "bg-gray-800" ${menuOpen ? "opacity-0 w-0" : "w-4"}`}
+                className={`block h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "opacity-0 w-0" : "w-4"}`}
               />
               <span
-                className={`block h-0.5 rounded transition-all duration-300 "bg-gray-800" ${menuOpen ? "w-6 -rotate-45 -translate-y-2" : "w-5"}`}
+                className={`block h-0.5 bg-gray-800 rounded transition-all duration-300 ${menuOpen ? "w-6 -rotate-45 -translate-y-2" : "w-5"}`}
               />
             </button>
           </div>

@@ -1,121 +1,28 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#040f04]/90">
-      {/* Animated pitch lines background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Radial grass glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_70%,rgba(34,197,94,0.12)_0%,transparent_70%)]" />
-
-        {/* Pitch SVG lines */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-[0.06]"
-          viewBox="0 0 1440 1200"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          {/* Center circle */}
-          <circle
-            cx="720"
-            cy="600"
-            r="200"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          <circle cx="720" cy="600" r="4" fill="#22c55e" />
-          {/* Center line */}
-          <line
-            x1="0"
-            y1="600"
-            x2="1440"
-            y2="600"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          {/* Left penalty box */}
-          <rect
-            x="0"
-            y="430"
-            width="220"
-            height="340"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          <rect
-            x="0"
-            y="510"
-            width="90"
-            height="180"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          {/* Right penalty box */}
-          <rect
-            x="1220"
-            y="430"
-            width="220"
-            height="340"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          <rect
-            x="1350"
-            y="510"
-            width="90"
-            height="180"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          {/* Outer boundary */}
-          <rect
-            x="40"
-            y="80"
-            width="1360"
-            height="820"
-            fill="none"
-            stroke="#22c55e"
-            strokeWidth="2"
-          />
-          {/* Halfway striped */}
-          <line
-            x1="720"
-            y1="80"
-            x2="720"
-            y2="900"
-            stroke="#22c55e"
-            strokeWidth="1"
-            strokeDasharray="8 8"
-          />
-        </svg>
-
-        {/* Particle sparkles */}
-        {Array.from({ length: 12 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-green-400 animate-pulse"
-            style={{
-              left: `${10 + i * 7.5}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              animationDelay: `${i * 0.4}s`,
-              opacity: 0.4,
-            }}
-          />
-        ))}
+      {/* Background image with parallax container */}
+      <div className="absolute inset-0 transition-transform duration-75 ease-out">
+        <Image
+          src="/Football-field.jpg"
+          alt="Football pitch aerial view"
+          fill
+          className="object-cover object-center"
+          priority
+        />
       </div>
 
-      {/* Parallax player silhouette suggestion (decorative strip) */}
-      <div className="absolute inset-0 pointer-events-none transition-transform duration-75 ease-out">
-        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-linear-to-t from-transparent via-transparent to-transparent" />
-        {/* Green flare left */}
-        <div className="absolute -left-20 top-1/3 w-96 h-96 rounded-full bg-green-600/10 blur-3xl" />
-        {/* Green flare right */}
-        <div className="absolute -right-20 top-1/2 w-80 h-80 rounded-full bg-green-500/10 blur-3xl" />
-      </div>
+      {/* Overlays */}
+      {/* Dark base so text is always legible */}
+      <div className="absolute inset-0 bg-black/35 pointer-events-none" />
+      {/* Green tint */}
+      <div className="absolute inset-0 bg-green-950/30 pointer-events-none" />
+      {/* Top vignette */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/70 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 min-w-5xl mx-auto pt-54 pb-16">
