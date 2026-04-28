@@ -70,8 +70,8 @@ const details = [
   },
   {
     label: "Venue",
-    value: "Kasarani",
-    sub: "Kasarani Sports Complex, Nairobi",
+    value: "The Goan Gymkhana",
+    sub: "The Goan Gymkhana, Nairobi",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -161,33 +161,32 @@ export default function About() {
                 <strong className="text-gray-900">
                   iGaming Afrika Summit Charity Soccer Tournament
                 </strong>{" "}
-                is a 7-a-side football tournament bringing together four teams
-                of industry legends for an afternoon of competitive, high-energy
-                football — all in service of a greater cause.
+                is a 7-a-side football tournament that brings together four
+                teams of industry professionals and football enthusiasts for an
+                afternoon of competitive, high-energy action — all in support of
+                a meaningful cause.
               </p>
+
               <p className="text-gray-600 text-lg leading-relaxed mb-5">
-                Played on a full-size 7-aside pitch measuring{" "}
-                <strong className="text-gray-900">
-                  40 metres by 80 metres
-                </strong>{" "}
-                at the iconic{" "}
-                <strong className="text-gray-900">
-                  Kasarani Sports Complex
-                </strong>{" "}
-                in Nairobi, the tournament will see teams battle it out across
-                multiple matches in a fast-paced, action-packed format.
+                Hosted at the{" "}
+                <strong className="text-gray-900">Goan Gymkhana</strong> in
+                Nairobi, the tournament will take place on a well-prepared
+                7-a-side pitch, offering an intimate and engaging environment
+                for both players and spectators. Teams will compete across
+                multiple fixtures in a fast-paced, action-packed format.
               </p>
+
               <p className="text-gray-600 text-lg leading-relaxed">
-                Taking place on the{" "}
+                Scheduled for the{" "}
                 <strong className="text-gray-900">6th of June 2026</strong> —
                 the closing day of the{" "}
                 <strong className="text-gray-900">
                   iGaming Afrika Summit 2026
                 </strong>{" "}
-                — this is the perfect grand finale to Africa&apos;s premier
-                iGaming gathering. The event brings together operators,
-                regulators, and industry leaders for a shared moment that goes
-                beyond business.
+                — the tournament serves as a fitting grand finale to Africa’s
+                premier iGaming gathering, uniting operators, regulators, and
+                industry leaders for a shared experience that blends sport,
+                networking, and community impact.
               </p>
             </div>
 

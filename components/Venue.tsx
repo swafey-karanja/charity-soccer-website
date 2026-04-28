@@ -4,10 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const venueStats = [
-  { value: "60,000+", label: "Capacity" },
-  { value: "1987", label: "Est." },
   { value: "Nairobi", label: "City" },
-  { value: "Kasarani", label: "District" },
+  { value: "Westlands", label: "District" },
 ];
 
 function useInView(threshold = 0.1) {
@@ -42,10 +40,11 @@ export default function Venue() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/Camp-nou.jpg"
-          alt="Kasarani Sports Complex — stadium atmosphere at night"
+          src="/gymkhana-pitch.webp"
+          alt="the goan gymkhana"
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          loading="eager"
         />
         {/* Layered overlays: dark from top, heavier dark from bottom where content sits */}
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/20" />
@@ -74,9 +73,9 @@ export default function Venue() {
                   fontFamily: "var(--font-oswald), 'Arial Black', sans-serif",
                 }}
               >
-                Kasarani
+                The Goan
                 <br />
-                <span className="text-green-400">Sports Complex</span>
+                <span className="text-green-400">Gymkhana</span>
               </h2>
             </div>
 
@@ -84,21 +83,19 @@ export default function Venue() {
               className={`transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             >
               <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-4">
-                The{" "}
-                <strong className="text-white">
-                  Moi International Sports Centre, Kasarani
-                </strong>{" "}
-                is Kenya&apos;s premier sporting arena and one of the largest
-                stadiums in Africa. Nestled in the Kasarani district of Nairobi,
-                this iconic venue has hosted some of the continent&apos;s most
-                celebrated sporting and entertainment events.
+                The <strong className="text-white">Goan Gymkhana</strong> is one
+                of Nairobi’s most historic and versatile social and sporting
+                clubs. The venue is known for its well-maintained grounds,
+                vibrant community atmosphere, and long-standing role as a hub
+                for recreational and cultural events.
               </p>
+
               <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 On the <strong className="text-white">6th of June 2026</strong>,
-                the complex will set the stage for the Legends Charity Game —
-                transforming into an electrifying arena where industry leaders,
-                football legends, and iGaming professionals come together for an
-                afternoon of sport, purpose, and community.
+                the grounds will host the iGaming Afrika Summit Charity Game —
+                bringing together football icons, industry leaders, and iGaming
+                professionals for an engaging afternoon of sport, networking,
+                and community impact in a relaxed and welcoming setting.
               </p>
 
               {/* Location pill */}
@@ -116,7 +113,7 @@ export default function Venue() {
                     <path d="M12 2 C8 2 4 5.5 4 10 C4 16 12 22 12 22 C12 22 20 16 20 10 C20 5.5 16 2 12 2Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  Kasarani, Nairobi, Kenya
+                  Nairobi, Kenya
                 </div>
               </div>
             </div>
@@ -130,7 +127,7 @@ export default function Venue() {
               {venueStats.map((s, i) => (
                 <div
                   key={s.label}
-                  className={`bg-black/30 backdrop-blur-sm px-8 py-7 transition-all duration-700 ${visible ? "opacity-100" : "opacity-0"}`}
+                  className={`bg-white/5 backdrop-blur-xs px-8 py-7 transition-all duration-700 ${visible ? "opacity-100" : "opacity-0"}`}
                   style={{ transitionDelay: `${300 + i * 80}ms` }}
                 >
                   <p
@@ -151,14 +148,14 @@ export default function Venue() {
 
             {/* CTA */}
             <a
-              href="https://maps.google.com/?q=Kasarani+Sports+Complex+Nairobi"
+              href="https://maps.app.goo.gl/EPuY5SM1ngXWTUio8"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-3 border border-white/25 hover:border-green-400/60 text-white/80 hover:text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
+              className="mt-5 inline-flex items-center gap-3 border border-white/25 hover:border-green-400/60 text-white/80 hover:text-white text-md font-semibold tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
             >
               <svg
                 viewBox="0 0 24 24"
-                className="w-4 h-4"
+                className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
