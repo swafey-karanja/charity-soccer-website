@@ -1,49 +1,50 @@
 import Image from "next/image";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaSpotify,
+  FaTelegram,
+  FaYoutube,
+} from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 const socials = [
   {
     label: "Facebook",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor">
-        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-      </svg>
-    ),
+    href: "https://www.facebook.com/share/1Ay79xHcfi/",
+    icon: <FaFacebook className="h-8 w-8 hover:text-blue-400" />,
   },
   {
     label: "Twitter / X",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
-    ),
+    href: "https://x.com/iGASummit",
+    icon: <FaX className="h-8 w-8 hover:text-white" />,
   },
   {
     label: "Instagram",
-    href: "#",
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
-      </svg>
-    ),
+    href: "https://www.instagram.com/igasummit",
+    icon: <FaInstagram className="h-8 w-8 hover:text-rose-500" />,
   },
   {
     label: "YouTube",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="currentColor">
-        <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
-      </svg>
-    ),
+    href: "https://www.youtube.com/@iGASummit",
+    icon: <FaYoutube className="h-8 w-8 hover:text-red-600" />,
+  },
+
+  {
+    label: "Linkedin",
+    href: "https://www.linkedin.com/company/igasummit/",
+    icon: <FaLinkedin className="h-8 w-8 hover:text-blue-500" />,
+  },
+  {
+    label: "Spotify",
+    href: "https://open.spotify.com/show/11m2XkXyP3MmjHRgXEVgwx",
+    icon: <FaSpotify className="h-8 w-8 hover:text-green-600" />,
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/YOUR_TELEGRAM_LINK",
+    icon: <FaTelegram className="h-8 w-8 hover:text-blue-600" />,
   },
 ];
 
@@ -69,7 +70,7 @@ export default function Footer() {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
-                className="w-15 h-15 rounded-full border bg-black flex items-center justify-center text-gray-100 hover:text-green-400 hover:border-green-500 transition-all duration-300"
+                className="w-15 h-15 rounded-full border bg-black flex items-center justify-center text-gray-100 transition-all duration-300"
               >
                 {s.icon}
               </a>
