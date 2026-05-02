@@ -61,7 +61,8 @@ export default function Hero() {
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="#tickets"
+            href="https://store.pesapal.com/charitysoccertournamentdonations"
+            target="_blank"
             className="group inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-black text-sm tracking-widest uppercase px-12 py-6 rounded-md transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 hover:-translate-y-1"
           >
             Donate Now

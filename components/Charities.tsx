@@ -131,7 +131,8 @@ export default function Charities() {
             100% of proceeds go directly to the charity cause
           </p>
           <a
-            href="#tickets"
+            href="https://store.pesapal.com/charitysoccertournamentdonations"
+            target="_blank"
             className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-md transition-all duration-300 hover:-translate-y-0.5"
           >
             Donate Now

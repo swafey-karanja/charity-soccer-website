@@ -42,12 +42,13 @@ export default function Navbar() {
                 </a>
               ))}
             </nav>
-            {/* <a
-              href="#tickets"
-              className="ml-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white text-sm font-black tracking-widest uppercase px-6 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5"
+            <a
+              href="https://store.pesapal.com/charitysoccertournamentdonations"
+              target="_blank"
+              className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-black text-sm tracking-widest uppercase px-8 py-4 rounded-md transition-all duration-300 hover:-translate-y-0.5"
             >
-              Donate
-            </a> */}
+              Donate Now
+            </a>
           </div>
 
           {/* Mobile: Hamburger */}
@@ -89,10 +90,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#tickets"
+            href="https://store.pesapal.com/charitysoccertournamentdonations"
+            target="_blank"
             className="mt-2 text-center bg-green-500 hover:bg-green-400 text-white text-sm font-black tracking-widest uppercase px-5 py-3 rounded-full transition-all duration-300"
           >
-            Donate
+            Donate Now
           </a>
         </nav>
       </div>
