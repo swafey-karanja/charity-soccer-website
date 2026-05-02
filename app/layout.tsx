@@ -15,9 +15,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Legends Charity Game",
+  title: "iGA Summit Soccer Charity Tournament",
   description:
-    "Past and present icons of World football come together for a cause bigger than the game.",
+    "iGaming industry players unite on the pitch for a cause bigger than the game. Join us for a historic charity match raising funds for sanitation facilities across East Africa.",
+  icons: {
+    icon: "/iGaming-Logo-icon-2.webp",
+    apple: "/iGaming-Logo-icon-2.webp",
+  },
 };
 
 export default function RootLayout({
