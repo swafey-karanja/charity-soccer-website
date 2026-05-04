@@ -15,8 +15,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gray-100">
-      <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8 py-2">
+    <header className="fixed top-0 left-0 w-full max-w-screen z-50 transition-all duration-500 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex items-center h-20 lg:h-28">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group shrink-0">
@@ -29,7 +29,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav + CTA — pushed to the far right */}
-          <div className="hidden lg:flex items-center gap-1 ml-auto">
+          <div className="hidden xl:flex items-center gap-1 ml-auto">
             <nav className="flex items-center gap-1">
               {navLinks.map((link) => (
                 <a
@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile: Hamburger */}
-          <div className="lg:hidden flex items-center gap-3 ml-auto">
+          <div className="xl:hidden flex items-center gap-3 ml-auto">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="flex flex-col gap-1.5 p-2"
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
+        className={`xl:hidden overflow-hidden transition-all duration-500 ${
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         } bg-gray-100/98 backdrop-blur-md border-t border-gray-200`}
       >

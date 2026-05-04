@@ -105,7 +105,7 @@ export default function Teams() {
         </div>
 
         {/* Teams grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
           {teams.map((team, i) => (
             <div
               key={team.name}

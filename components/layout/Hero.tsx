@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/70 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 min-w-5xl mx-auto pt-54 pb-16">
+      <div className="relative z-10 text-center px-4 lg:min-w-5xl mx-auto pt-54 pb-16">
         {/* Eyebrow badge */}
         <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-black tracking-[0.3em] uppercase px-6 py-4 rounded-full mb-8 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -35,7 +35,7 @@ export default function Hero() {
         {/* Main title */}
         <h1 className="font-black leading-none mb-4">
           <span
-            className="block text-4xl sm:text-7xl uppercase"
+            className="block text-2xl sm:text-7xl uppercase"
             style={{
               fontFamily: "'Oswald', 'Arial Black', sans-serif",
               letterSpacing: "0.02em",

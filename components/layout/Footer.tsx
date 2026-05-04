@@ -51,14 +51,14 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-gray-100">
-      <div className="max-w-400 mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-row items-center justify-between gap-6">
+      <div className="xl:container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <Image
               src="/Summit_Logo.png"
-              width={250}
-              height={150}
+              width={230}
+              height={120}
               alt="Summit Logo"
             />
           </a>
@@ -70,7 +70,7 @@ export default function Footer() {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
-                className="w-15 h-15 rounded-full border bg-black flex items-center justify-center text-gray-100 transition-all duration-300"
+                className="w-10 h-10 lg:w-15 lg:h-15 rounded-full border bg-black flex items-center justify-center text-gray-100 transition-all duration-300"
               >
                 {s.icon}
               </a>
